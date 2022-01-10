@@ -1,0 +1,24 @@
+﻿<Window Icon="admin1.png" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="PLWPF.Manager"
+        mc:Ignorable="d"
+        Title="Manager" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="guestRequestViewSource" d:DesignSource="{d:DesignInstance {x:Type BE:GuestRequest}, CreateList=True}"/>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="admin.png"/>
+    </Window.Background>
+    <Grid DataContext="{StaticResource guestRequestViewSource}">
+        <Button Content="חזרה לתפריט הראשי" HorizontalAlignment="Left" Margin="121,363,0,0" VerticalAlignment="Top" Width="537" Click="GoBackClick" Height="20"/>
+        <Button Content="גרופינג לקוחות" HorizontalAlignment="Left" Margin="54,173,0,0" VerticalAlignment="Top" Width="115" Click="Button_Click" Height="49"/>
+        <Button Content="שאילתא הזמנות" HorizontalAlignment="Left" Margin="54,40,0,0" VerticalAlignment="Top" Width="115" Click="OrderListButton" Height="48"/>
+        <Button Content="שאילתא יחידות אירוח" HorizontalAlignment="Left" Margin="54,106,0,0" VerticalAlignment="Top" Width="115" Click="HUClick" Height="48"/>
+        <Button Content="כל ההזמנות" HorizontalAlignment="Left" Margin="626,40,0,0" VerticalAlignment="Top" Width="106" Height="48" Click="Button_All_Orders"/>
+        <Button Content="כל היחידות" HorizontalAlignment="Left" Margin="626,106,0,0" VerticalAlignment="Top" Width="106" Height="48" Click="Button_All_Hostinng_Units"/>
+        <Button Content="כל הדרישות" HorizontalAlignment="Left" Margin="626,173,0,0" VerticalAlignment="Top" Width="106" Height="49" Click="Button_All_Guest_Requests"/>
+    </Grid>
+</Window>

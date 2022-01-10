@@ -1,0 +1,22 @@
+﻿<Window x:Class="PLWPF.EntryNumberForQuery"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="EntryNumberForQuery" Height="289.2" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="209*"/>
+        </Grid.RowDefinitions>
+        <Label Content="הכנס מספר ימים" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="374" FontWeight="Bold" FontSize="20" Height="41"/>
+        <local:NumericUpDownControl x:Name="sendMail" Margin="58,80.8,251.6,96" Grid.Row="2" />
+        <local:NumericUpDownControl x:Name="creation" Margin="276,80.8,37.6,96" Grid.Row="2" />
+        <Label Content="למרחק מיום היצירה להיום" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="238,42.8,0,0" Grid.Row="2" Height="26" Width="146"/>
+        <Label Content="למרחק מיום שליחת המייל להיום" HorizontalAlignment="Left" Margin="10,42.8,0,0" VerticalAlignment="Top" Grid.Row="2" Height="26" Width="178"/>
+        <Button Content=" כניסה לשאילתה" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,153.8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="374" Click="EntryQueryClick" Height="45"/>
+    </Grid>
+</Window>

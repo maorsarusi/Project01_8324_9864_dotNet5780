@@ -1,0 +1,21 @@
+﻿<Window x:Class="PLWPF.Hosting_Unit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="Hosting Unit" Height="450" Width="800">
+    <Grid>
+        <Image Source="mainUnit.jpg" Stretch="Fill">
+
+        </Image>
+        <Button Content="הוספה" HorizontalAlignment="Left" Margin="568,119,0,0" VerticalAlignment="Top" Width="105" Click="Button_Click" Height="38"/>
+        <!--<Button Content="עדכון " HorizontalAlignment="Left" Margin="382,203,0,0" VerticalAlignment="Top" Width="75"/>-->
+        <!--<Button Content="מחיקה" HorizontalAlignment="Left" Margin="114,203,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.446,-1.769"/>-->
+        <Button Content="חזרה לתפריט הראשי" HorizontalAlignment="Left" Margin="122,350,0,0" VerticalAlignment="Top" Width="551" RenderTransformOrigin="0.166,-0.799" Click="GoBack"/>
+        <Button Content="איזור אישי" HorizontalAlignment="Left" Margin="122,119,0,0" VerticalAlignment="Top" Width="100" ToolTip="מחיקה או עדכון" Click="passwordClick" Height="38"/>
+        <Label Name="AreaLabel" Content="איזור יחידות האירוח שלנו" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="244,38,0,0" VerticalAlignment="Top" Width="363" MouseUp="Label_MouseUp" MouseLeave="AreaLabel_MouseLeave" Foreground="#FF604C94"/>
+
+    </Grid>
+</Window>
