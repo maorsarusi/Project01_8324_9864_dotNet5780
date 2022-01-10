@@ -16,6 +16,8 @@ namespace BL
 
         public static Layers layer = Layers.LayerBl;
 
+        public object MessageBox { get; private set; }
+
         //=========================================================================================================
 
         #region Dates Function   
@@ -75,10 +77,12 @@ namespace BL
         //שינוי הערכים שבין התאריכים המתקבלים לשקר ביחידת האירוח ספיציפית
         private void changeTofalse(DateTime time1, DateTime time2, HostingUnit hu)
         {
-            while (time1 < time2)
+            DateTime date = time1;
+            while (date < time2)
             {
-                hu[time1] = false;
-                time1.AddDays(1);
+                hu[date] = false;
+                date =  time1.AddDays(1.0);
+                time1 = date;
             }
         }
         //עדכון המטריצה של יחידת אירוח ספיציפית ל11 חודשים קדימה
@@ -629,11 +633,11 @@ namespace BL
         public int NumberOfUnitsThatMatchingTheRequirement(GuestRequest gr)
         {
             int count = 0;
-            //IEnumerable<HostingUnit> hostingUnits = dal.GetAllUnits();
-            //var numUnitsThatMatchingTheRequirement =
-            //    (from hu in hostingUnits
-            //     where matchingBetweenUnitAndRequirement(hu, gr)
-            //     select ++count).ToList();
+            IEnumerable<HostingUnit> hostingUnits = dal.GetAllUnits();
+            var numUnitsThatMatchingTheRequirement =
+                (from hu in hostingUnits
+                 where matchingBetweenUnitAndRequirement(hu, gr)
+                 select ++count).ToList();
             return count;
         }
 

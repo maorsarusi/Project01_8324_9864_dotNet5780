@@ -50,6 +50,7 @@
     <Compile Include="IBL.cs" />
     <Compile Include="InvalidDurationException.cs" />
     <Compile Include="MailException.cs" />
+    <Compile Include="MessageBoxResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
